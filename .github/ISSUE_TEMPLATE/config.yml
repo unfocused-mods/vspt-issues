@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: VS Path Tracing on the Mod DB
+    url: https://mods.vintagestory.at/vsptmaterials
+    about: The materials and runtime companions, and their release notes.

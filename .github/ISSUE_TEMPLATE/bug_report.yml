@@ -1,0 +1,78 @@
+name: Bug report
+description: Something is wrong, broken, slow or crashes
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for testing. The quickest way to a fix is the report zip: *Settings → Path Tracing → Advanced → Package logs for a bug report*, or `.vspt report` in chat. Drag it into the box at the bottom.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you saw, and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: How to make it happen
+      description: The steps, if you know them. Where you were and what was on screen helps (a cave, the sea, a modded machine).
+      placeholder: |
+        1. Load a world
+        2. ...
+  - type: dropdown
+    id: how-often
+    attributes:
+      label: How often
+      options:
+        - Every time
+        - Sometimes
+        - Once so far
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: VS Path Tracing version
+      description: The number in the zip's name in your Mods folder, for example vspt_0.1.10.zip.
+      placeholder: "0.1.10"
+    validations:
+      required: true
+  - type: input
+    id: gpu
+    attributes:
+      label: Graphics card
+      placeholder: "RTX 4070, 12 GB"
+  - type: dropdown
+    id: window
+    attributes:
+      label: Window mode
+      options:
+        - Windowed
+        - Borderless fullscreen
+        - Fullscreen
+        - Not sure
+  - type: dropdown
+    id: hdr
+    attributes:
+      label: Windows HDR on this display
+      options:
+        - "On"
+        - "Off"
+        - Not sure
+  - type: dropdown
+    id: mods
+    attributes:
+      label: Other mods
+      options:
+        - None
+        - A few
+        - Many (a modpack)
+  - type: textarea
+    id: report
+    attributes:
+      label: Report zip, screenshots, video
+      description: Drag the vspt-report zip here, with any screenshots or a short video.
+    validations:
+      required: true

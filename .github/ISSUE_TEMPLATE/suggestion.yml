@@ -1,0 +1,16 @@
+name: Suggestion
+description: An idea, a look that could be better, a setting you want
+labels: ["suggestion"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: Your suggestion
+      description: What you would like, and why. Screenshots help, especially a comparison with how you expected it to look.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: VS Path Tracing version, if it matters
+      placeholder: "0.1.10"
