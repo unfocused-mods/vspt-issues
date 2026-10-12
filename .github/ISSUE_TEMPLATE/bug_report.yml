@@ -93,7 +93,7 @@ body:
     attributes:
       label: Other mods
       options:
-        - None
+        - No other mods
         - A few
         - Many (a modpack)
   - type: dropdown
