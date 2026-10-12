@@ -1,11 +1,33 @@
 name: Bug report
-description: Something is wrong, broken, slow or crashes
+description: A crash, a setup problem, something that looks wrong or runs badly. Logs help, but you can report without them.
 labels: ["bug"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for testing. The quickest way to a fix is the report zip: *Settings → Path Tracing → Advanced → Package logs for a bug report*, or `.vspt report` in chat. Drag it into the box at the bottom.
+        Thanks for reporting. Your logs are the quickest way to a fix, and getting them takes a few seconds.
+
+        **If the game runs:** open *Settings → Path Tracing → Advanced* and press **Package logs for a bug report** (or type `.vspt report` in chat, which works even when the screen is black). A folder opens with a `vspt-report-….zip` selected. Drag that zip into the *Logs* box at the bottom of this form. It has your logs, your Path Tracing settings and your graphics card; your Windows user name is taken out, though your in-game player name can appear in the logs.
+
+        **If the game won't start, or the button isn't there:**
+        1. Press **Win + R**, paste `%appdata%\VintagestoryData` and press Enter. (If you moved your data folder, open that one instead.)
+        2. Right-click the **Logs** folder, then *Compress to ZIP file* (*Send to → Compressed (zipped) folder* on Windows 10).
+        3. Drag the zip into the *Logs* box below. If there's a `vspt` folder next to `Logs`, zip that too.
+
+        **Can't get either?** Report it anyway and say so. A screenshot of any error helps.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of problem
+      options:
+        - Crash, freeze or black screen
+        - Install, setup or update problem
+        - Something looks wrong
+        - Slow or stuttering
+        - Window, display or HDR problem
+        - Something else
+    validations:
+      required: true
   - type: textarea
     id: what
     attributes:
@@ -35,15 +57,20 @@ body:
     id: version
     attributes:
       label: VS Path Tracing version
-      description: The number in the zip's name in your Mods folder, for example vspt_0.1.10.zip.
-      placeholder: "0.1.10"
-    validations:
-      required: true
+      description: Shown in the game's mod manager, or in the zip's name in your Mods folder (vspt_0.2.1.zip is 0.2.1). Leave it empty if you don't know.
+      placeholder: "0.2.1"
   - type: input
     id: gpu
     attributes:
       label: Graphics card
       placeholder: "RTX 4070, 12 GB"
+  - type: dropdown
+    id: monitors
+    attributes:
+      label: Monitors
+      options:
+        - One
+        - Two or more
   - type: dropdown
     id: window
     attributes:
@@ -69,10 +96,19 @@ body:
         - None
         - A few
         - Many (a modpack)
+  - type: dropdown
+    id: logs
+    attributes:
+      label: Logs
+      description: Which logs you could attach. See the top of this form for how.
+      options:
+        - The report zip from the game
+        - The Logs folder, zipped by hand
+        - I couldn't get any (I've said why below)
+    validations:
+      required: true
   - type: textarea
     id: report
     attributes:
-      label: Report zip, screenshots, video
-      description: Drag the vspt-report zip here, with any screenshots or a short video.
-    validations:
-      required: true
+      label: Logs, screenshots, video
+      description: Drag the zip here, with any screenshots or a short video. Files up to 25 MB.

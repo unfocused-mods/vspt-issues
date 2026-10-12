@@ -1,7 +1,11 @@
 name: Suggestion
-description: An idea, a look that could be better, a setting you want
+description: An idea, a look that could be better, a setting you'd like. For anything broken, use Bug report.
 labels: ["suggestion"]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        **Is something broken, crashing or not working as it should?** Please go back and choose **Bug report** instead, even if you don't have logs. It asks the questions that help me fix it.
   - type: textarea
     id: idea
     attributes:
@@ -13,4 +17,4 @@ body:
     id: version
     attributes:
       label: VS Path Tracing version, if it matters
-      placeholder: "0.1.10"
+      placeholder: "0.2.1"

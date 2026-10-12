@@ -1,5 +1,8 @@
 blank_issues_enabled: false
 contact_links:
+  - name: Questions and screenshots on Discord
+    url: https://discord.com/channels/302152934249070593/1556092616360071338
+    about: The VS Path Tracing channel on the official Vintage Story Discord. If the link doesn't open, join at https://discord.gg/BG5Ne98us first.
   - name: VS Path Tracing on the Mod DB
-    url: https://mods.vintagestory.at/vsptmaterials
-    about: The materials and runtime companions, and their release notes.
+    url: https://mods.vintagestory.at/vspt
+    about: Downloads, the install guide, known issues and release notes.

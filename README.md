@@ -20,6 +20,8 @@ never in it. Your in-game player name can appear in the logs.
 If the game will not start at all, zip the `Logs` folder from your Vintage Story data folder
 (`%APPDATA%\VintagestoryData\Logs` unless you moved it) and attach that instead.
 
+No logs at all? Report it anyway and say so. Anything broken goes in a bug report, not a suggestion.
+
 ## Suggestions
 
 [Suggest something](../../issues/new?template=suggestion.yml). Screenshots help, especially a comparison with how
